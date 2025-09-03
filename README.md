@@ -6,7 +6,7 @@ A **Tic-Tac-Toe** game playable in **real-time** between two players via the bro
 
 This project uses **Node.js, Express, and Socket.IO** to manage player connections and game state.
 
-For this part I worked only on : [index.html](index.html), [loading.gif](loading.gif), [public\client.js](public\client.js), [public\style.css](public\style.css), [server.cjs](server.cjs)
+For this part I worked only on : [index.html](index.html), [loading.gif](loading.gif), [public/client.js](public/client.js), [public/style.css](public/style.css), [server.cjs](server.cjs)
 
 ## First idea :
 
