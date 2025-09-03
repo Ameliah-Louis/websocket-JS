@@ -181,10 +181,16 @@ CHECK_WIN -->|No| TURN_O --> TURN_X
 
 **Screenshots**
 
-![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public/img/Interface1.png)
-![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public\img\Interface2.png) 
-![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/\img\Interface3.png) 
-![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public\img\Interface4.png) 
-![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/\img\Interface5.png) 
-![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public\img\Interface6.png) 
-![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public\img\Interface7.png) 
+![image1](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public/img/Interface1.png)
+
+![image2](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public/img/Interface2.png) 
+
+![image3](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public/img/Interface3.png)
+
+![image4](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public/img/Interface4.png)
+
+![image5](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public/img/Interface5.png)
+
+![image6](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public/img/Interface6.png) 
+
+![image7](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public/img/Interface7.png) 
