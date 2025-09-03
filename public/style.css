@@ -1,0 +1,300 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: rgb(0, 175, 0);
+}
+.neon-text {
+  font-size: 75px;
+  color: #fff;
+  text-shadow:
+    0 0 5px rgb(0, 255, 81),
+    0 0 10px rgb(0, 255, 81),
+    0 0 20px rgb(0, 255, 81),
+    0 0 40px rgb(0, 255, 81),
+    0 0 80px rgb(0, 255, 81);
+  padding: 20px;
+  text-align: center;         
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 0 0 5px rgb(0, 255, 81), 0 0 10px rgb(0, 255, 81), 0 0 20px rgb(0, 255, 81), 0 0 40px rgb(0, 255, 81), 0 0 80px rgb(0, 255, 81);
+  padding: 5px;
+  text-align: center;
+}
+
+
+.inputGroup {
+  font-family: 'Segoe UI', sans-serif;
+  margin: auto;
+  max-width: 200px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputGroup input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+.inputGroup :is(input:focus, input:valid)~label {
+  transform: translateY(-50%) scale(.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #e8e8e8;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: rgb(150, 150, 200);
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #3178c6aa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* From Uiverse.io by Kabak */ 
+button.startGame {
+  height: 50px;
+  margin: 5px;
+  padding: auto;
+  width: 200px;
+  background: #333;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Consolas, Courier New, monospace;
+  border: solid #404c5d 1px;
+  font-size: 16px;
+  color: rgb(161, 161, 161);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #2e2d2d, #212121);
+  -webkit-box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
+    inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+  box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
+    inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+}
+
+button.startGame:hover {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  color: #d6d6d6;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+button.startGame:active .find {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  color: #d6d6d6;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+
+
+  .btn{
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  width:150px;
+  height:150px;
+  font-size: 2.5em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  border:#242424 1px solid;
+  border-color: #242424;
+  text-transform :uppercase;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    
+}
+.btnx{
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px rgb(255, 40, 90),
+    0 0 20px rgb(255, 40, 90),
+    0 0 40px rgb(255, 20, 200),
+    0 0 50px rgb(255, 20, 200),
+    0 0 100px rgb(255, 20, 200);
+}
+.btno{
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px rgb(0, 175, 255),
+    0 0 20px rgb(0, 175, 255),
+    0 0 40px rgb(0, 255, 245),
+    0 0 50px rgb(0, 255, 245),
+    0 0 80px rgb(0, 255, 245);
+}
+
+.btn:hover {
+  border-color: #646cff;
+}
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  /* button {
+    background-color: #f9f9f9;
+  } */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+    }
+
+    #game-name{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    #bigCont {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #cont {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 50vh;
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn {
+        color: white;
+        cursor: pointer;
+        background-color: rgb(78, 79, 80);
+    }
+
+    .btn:hover {
+        background-color: rgb(45, 46, 47);
+    }
+
+    #header {
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #head h1 {
+        font-size: 6vmin;
+    }
+
+.loading {
+  width: 150px;
+  margin: 1rem;
+  opacity: 0.5;
+}
