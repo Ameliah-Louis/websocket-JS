@@ -1,6 +1,6 @@
 
 # ❌🔵 Tic-Tac-Toe WebSockets 🔵❌
-  work done on [repository](github.com/mlangumier/websocket-client/tree/Rendu-JS-Ameliah)
+  work done on [repository](https://github.com/mlangumier/websocket-client/tree/Rendu-JS-Ameliah)
 
 A **Tic-Tac-Toe** game playable in **real-time** between two players via the browser.
 
