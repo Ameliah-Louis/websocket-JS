@@ -20,25 +20,56 @@ document.getElementById("find").addEventListener("click", () => {
   document.getElementById("find").disabled = true;
 });
 
+// Gérer "de qui c'est le tour" pour changer la couleur selon qui joue
+let playerSymbol = "";
+
 // On récupère le nom de l’adversaire
 // puis on initialise la partie avec les attributions de role à chaque joueur et si c 'est ou non son tour
 socket.on("gameStart", (data) => {
   const { opponent, symbol, turn } = data;
 
+  playerSymbol = symbol; // <-- stock ton symbole pour pouvoir le manipuler pour changer le CSS plus tard
   document.getElementById("oppName").innerText = opponent;
   document.getElementById("value").innerText = symbol;
-  document.getElementById("whosTurn").innerText = turn ? "Your Turn" : "Opponent's Turn";
 
-  // On cache l'inscription et on affiche l'espace de jeu.
-  document.getElementById("loading").style.display = "none";
-  document.getElementById("name").style.display = "none";
-  document.getElementById("find").style.display = "none";
-  document.getElementById("enterName").style.display = "none";
-  document.getElementById("bigCont").style.display = "block";
-  document.getElementById("userCont").style.display = "block";
-  document.getElementById("oppNameCont").style.display = "block";
-  document.getElementById("valueCont").style.display = "block";
-  document.getElementById("whosTurn").style.display = "block";
+// Ajoute le style (X rouge, O bleu)
+const valueElem = document.getElementById("value");
+valueElem.classList.toggle("x-color", symbol === "X");
+valueElem.classList.toggle("o-color", symbol === "O");
+const userElement = document.getElementById("user");
+userElement.classList.toggle("x-color", symbol === "X");
+userElement.classList.toggle("o-color", symbol === "O");
+// Couleur de l’opponent
+const oppNameElem = document.getElementById("oppName");
+oppNameElem.classList.remove("x-color", "o-color");
+oppNameElem.classList.add(playerSymbol === "X" ? "o-color" : "x-color");
+
+// On gère la couleur du Tour selon si c'est le sien ou pas
+const whosTurnElem = document.getElementById("whosTurn");
+// On reset les classes avant d'ajouter
+whosTurnElem.classList.remove("x-color", "o-color");
+
+// Si c'est ton tour → ta couleur
+if (turn) {
+  whosTurnElem.classList.add(playerSymbol === "X" ? "x-color" : "o-color");
+} 
+// Si c'est l'adversaire → l'inverse de ta couleur
+else {
+  whosTurnElem.classList.add(playerSymbol === "X" ? "o-color" : "x-color");
+}
+//Gestion de l'information de qui c'est le tour
+whosTurnElem.innerText = turn ? "Your Turn" : "Opponent's Turn";
+
+// On cache l'inscription et on affiche l'espace de jeu.
+document.getElementById("loading").style.display = "none";
+document.getElementById("name").style.display = "none";
+document.getElementById("find").style.display = "none";
+document.getElementById("enterName").style.display = "none";
+document.getElementById("bigCont").style.display = "block";
+document.getElementById("userCont").style.display = "block";
+document.getElementById("oppNameCont").style.display = "block";
+document.getElementById("valueCont").style.display = "block";
+document.getElementById("whosTurn").style.display = "block";
 });
 
 // Au clic sur une des cases du jeu (un boutton ici) on envoie au serveur que c'est un "play" avec les infos de qui le joue et l'id du btn joué
@@ -52,13 +83,25 @@ document.querySelectorAll(".btn").forEach((btn) => {
 socket.on("update", ({ board, turn }) => {
   document.getElementById("whosTurn").innerText = turn ? "Your Turn" : "Opponent's Turn"; // info si c'est ton tour ou celui de l'adversaire
 
+  // On reset les classes avant d'ajouter
+  document.getElementById("whosTurn").classList.remove("x-color", "o-color");
+
+  // Si c'est ton tour → ta couleur
+  if (turn) {
+    document.getElementById("whosTurn").classList.add(playerSymbol === "X" ? "x-color" : "o-color");
+  } 
+  // Si c'est l'adversaire → l'inverse de ta couleur
+  else {
+    document.getElementById("whosTurn").classList.add(playerSymbol === "X" ? "o-color" : "x-color");
+  }
+
   // avec les nouvelles infos du plateau on boucle sur les bouttons
   board.forEach((val, i) => {
     const cell = document.getElementById(`btn${i + 1}`); // gestion de la différence entre index et numéro du bouton d'ou le +1
     cell.innerText = val; // on remplit avec la valeur dans la case (x ou o)
     cell.disabled = val !== ""; // si la case n'est pas vide, elle est désactivée
-    cell.classList.toggle("btnx", val === "X"); // pour chaque case avec un X on ajoute la classe btnx pour styliser en CSS
-    cell.classList.toggle("btno", val === "O"); // pour chaque case avec un O on ajoute la classe btno pour styliser en CSS
+    cell.classList.toggle("x-color", val === "X"); // pour chaque case avec un X on ajoute la classe x-color pour styliser en CSS
+    cell.classList.toggle("o-color", val === "O"); // pour chaque case avec un O on ajoute la classe o-color pour styliser en CSS
   });
 });
 

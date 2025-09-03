@@ -4,6 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
+  color-scheme: #242424;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
@@ -36,6 +37,7 @@ h1 {
   line-height: 1.1;
   color: rgb(0, 175, 0);
 }
+
 .neon-text {
   font-size: 75px;
   color: #fff;
@@ -52,11 +54,15 @@ h1 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #fff;
   text-shadow: 0 0 5px rgb(0, 255, 81), 0 0 10px rgb(0, 255, 81), 0 0 20px rgb(0, 255, 81), 0 0 40px rgb(0, 255, 81), 0 0 80px rgb(0, 255, 81);
   padding: 5px;
   text-align: center;
+}
+
+.whosTurn{
+  font-size: 2rem;
 }
 
 
@@ -198,7 +204,7 @@ button.startGame:active .find {
     color: #fff;
     
 }
-.btnx{
+.x-color{
   text-shadow:
     0 0 5px #fff,
     0 0 10px rgb(255, 40, 90),
@@ -207,7 +213,7 @@ button.startGame:active .find {
     0 0 50px rgb(255, 20, 200),
     0 0 100px rgb(255, 20, 200);
 }
-.btno{
+.o-color{
   text-shadow:
     0 0 5px #fff,
     0 0 10px rgb(0, 175, 255),
