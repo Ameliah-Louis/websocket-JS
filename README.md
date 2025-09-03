@@ -68,19 +68,13 @@ nodemon server.cjs
 
 ## ⚡ Express
 
-  
 
 **What is it?** A light framework for Node.js.
 
-
 **Role in this project:**
 
-  
 Serves/send static files (HTML, CSS, JS) to the browser.
-
-  
 Creates simple routes, to display the game page.
-
   
 **Connection to WebSockets:** Express doesn’t handle real-time communication by itself, but it provides the server base for Socket.IO to run on.
 
@@ -90,15 +84,10 @@ Creates simple routes, to display the game page.
   
 **What is it?** A Node.js library that enables real-time communication between the server and browsers.
 
-  
 **Role in this project:**
-
   
 Lets both players see moves instantly.
-
-  
 Manages events like “player joined”, “move played”, “game over”.
-
   
 **How it works:** Uses WebSockets (with fallback if the browser doesn’t support them) to send and receive data continuously.
 ---
@@ -106,19 +95,12 @@ Manages events like “player joined”, “move played”, “game over”.
 
 ## 🔗 Features
 
-
-- **Simple  interface** using HTML + CSS
-
+-  **Simple  interface** using HTML + CSS
 -  **Real-time connection** with Socket.IO
-
 -  **Automatic role assignment** (X and O)
-
 -  **Instant updates** on the game board for both players
-
 -  **Automatic check** for victory or draw
-
 -  **Automatic game reset** after a match
-
   
 ---
 
@@ -199,10 +181,10 @@ CHECK_WIN -->|No| TURN_O --> TURN_X
 
 **Screenshots**
 
-![image](public\img\Interface1.png)
-![image](public\img\Interface2.png) 
-![image](public\img\Interface3.png) 
-![image](public\img\Interface4.png) 
-![image](public\img\Interface5.png) 
-![image](public\img\Interface6.png) 
-![image](public\img\Interface7.png) 
+![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public/img/Interface1.png)
+![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public\img\Interface2.png) 
+![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/\img\Interface3.png) 
+![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public\img\Interface4.png) 
+![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/\img\Interface5.png) 
+![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public\img\Interface6.png) 
+![image](https://github.com/Ameliah-Louis/websocket-JS/blob/main/public\img\Interface7.png) 
