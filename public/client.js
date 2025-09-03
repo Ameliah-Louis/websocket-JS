@@ -107,13 +107,6 @@ socket.on("update", ({ board, turn }) => {
 
 // Si le serveur envoie un gameOver alors on le récupère et selon le gagnant ou le draw on lance une alert correspondante
 socket.on("gameOver", ({ winner }) => {
-  setTimeout(() => {
-    alert(winner ? `${winner} WON!` : "DRAW!");
-    location.reload();
-  }, 2000);
-});
-
-socket.on("gameOver", ({ winner }) => {
   setTimeout(() => {                  // set un délai laisse le temps de remplir la case (sinon alert pop avant le remplissage)
     alert(winner ? `${winner} WON!` : "DRAW!"); 
 
